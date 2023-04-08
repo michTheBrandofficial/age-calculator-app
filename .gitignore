@@ -18,6 +18,7 @@ node_modules
 dist
 firebase.json
 .firebaserc
+.firebase
 README-template.md 
 readmeee.md 
 style-guide.md 

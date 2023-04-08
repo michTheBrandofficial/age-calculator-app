@@ -44,8 +44,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Repo](https://github.com/michTheBrandofficial/age-calculator-app)
+- Live Site URL: [Firebase app](https://age-calculator-988b3.web.app)
 
 ## My process
 
