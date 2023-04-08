@@ -1,0 +1,104 @@
+form {
+  height: fit-content;
+  display: flex;
+}
+
+label {
+  display: inline-block;
+  width: 22.5%;
+  height: 100%;
+  font-family: 'Poppins Bold';
+  margin-right: 25px;
+}
+
+label p {
+  font-size: 13px;
+  margin-bottom: 5px;
+  color: hsl(0, 1%, 44%, .8);
+  letter-spacing: 2px;
+}
+
+input {
+  width: 100%;
+  height: 60px;
+  font-size: 32px;
+  font-family: 'Poppins Bold';
+  padding-left: 15px;
+  border: 1px solid hsl(0, 0%, 86%);
+  outline: none;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: hsl(0, 1%, 44%, 1);
+}
+
+input:focus {
+  border-color: hsl(259, 100%, 65%);
+  caret-color: hsl(259, 100%, 65%);
+}
+
+/* error-empty all */
+
+.error::after {
+  font-size: 13px;
+  font-family: 'Poppins Italic';
+  color: hsl(0, 100%, 67%, .8);
+}
+
+.error p {
+  color:  hsl(0, 100%, 67%, .8);
+}
+
+.error input {
+  border-color: hsl(0, 100%, 67%, .8);
+}
+
+.error.empty::after {
+  content: 'This field is required';
+}
+
+/* not numbers */
+.error.nan::after {
+  content: 'Must be a number';
+}
+
+/* 30 numbered months */ 
+.error.date::after {
+  content: 'Must be a valid date';
+}
+
+/* invalid dates */
+.error.invalid.day::after {
+  content: 'Must be a valid day';
+}
+
+.error.invalid.month::after {
+  content: 'Must be a valid month';
+}
+
+.error.invalid.year::after {
+  content: 'Must be in the past';
+}
+
+@media (max-width: 376px) {
+  form {
+    justify-content: space-between;
+  }
+
+  label {
+    width: 30%;
+    margin: 0;
+  }
+
+  label p {
+    font-size: 12px;
+    font-family: 'Poppins Bold';
+  }
+
+  input {
+    height: 45px;
+    font-size: 1.5rem;
+    padding-left: 10px;
+  }
+}

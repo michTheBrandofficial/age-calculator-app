@@ -1,0 +1,118 @@
+.age-calc {
+  background-color: hsl(0, 0%, 100%);
+  max-width: 640px;
+  min-height: 500px;
+  padding: 40px;
+  border-radius: 20px 20px 175px 20px;
+}
+
+/* remove #test - unneccessary div */
+.age-calc , #test {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#test {
+  width: 100%;
+  height: inherit;
+}
+
+form, #section {
+  width: 100%;
+}
+
+.button {
+  --button-h: 70px;
+  min-height: var(--button-h);
+  position: relative;
+}
+
+.button button, .button hr {
+  position: absolute;
+}
+
+.button button {
+  height: var(--button-h);
+  width: var(--button-h);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: hsl(259, 100%, 65%);
+  z-index: 2;
+  left: calc(100% - var(--button-h));
+  transition: .3s ease;
+}
+
+.button button:hover {
+  background-color: hsl(0, 0%, 8%);
+}
+
+.button button:active {
+  scale: 1.5;
+  background-color: hsl(0, 0%, 8%);
+}
+
+.button hr {
+  width: 100%;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-bottom: none;
+  top: 45%;
+} 
+
+.age {
+  height: 60%;
+}
+
+.age h1 {
+  font-family: 'Poppins ExtraBoldItalic';
+  height: 33.3%;
+  font-size: 390%;
+}
+
+.age h1 span {
+  display: inline-block;
+  margin-right: 5px;
+  color: hsl(259, 100%, 65%);
+}
+
+/* remove these colors */
+object {
+	color: hsl(259, 100%, 65%)
+	hsl(0, 100%, 67%)
+	hsl(0, 0%, 100%)
+	hsl(0, 0%, 94%)
+	hsl(0, 0%, 86%)
+	hsl(0, 1%, 44%)
+	hsl(0, 0%, 8%);
+}
+
+
+@media (max-width: 376px) {
+  .age-calc {
+    width: 90%;
+    height: 450px;
+    min-height: 0;
+    padding: 30px;
+
+    border-bottom-right-radius: 100px;
+  }
+
+
+  .age {
+    height: 50%;
+  }
+
+  .age h1 {
+    font-size: 11vw;
+  }
+
+  .button {
+    --button-h: 60px;
+  }
+
+  .button button {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
